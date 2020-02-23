@@ -61,4 +61,23 @@ public class MyLinkedList<node extends Comparable<node>> {
         }
         return deletedNode;
     }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public Node<node> getObject() {
+        Node<node> temp;
+
+        if (getTrav() == null && getHead() == null) {
+            System.out.println("List is Empty.");
+            return null;
+        } else if (getTrav() == null) {
+            setTrav(getHead());
+            return null;
+        }
+        temp = getTrav();
+        setTrav(getTrav().getNext());
+        return temp;
+    }
 }

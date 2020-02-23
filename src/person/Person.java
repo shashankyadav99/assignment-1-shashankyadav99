@@ -34,9 +34,9 @@ public class Person implements Comparable<Person> {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(StringBuffer phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         if (phoneNumber == null)
-            this.phoneNumber = phoneNumber;
+            this.phoneNumber = new StringBuffer(phoneNumber);
         else
             this.phoneNumber.append(", " + phoneNumber);
     }

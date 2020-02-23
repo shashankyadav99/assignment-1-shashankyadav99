@@ -21,4 +21,17 @@ public class MyLinkedList<node extends Comparable<node>> {
     public void setTrav(Node<node> trav) {
         this.trav = trav;
     }
+
+    public void insert(Node<node> node) {
+        if (getHead() == null)
+            setHead(node);
+        else {
+            Node<node> temp = head;
+            while (temp.getNext() != null)
+                temp = temp.getNext();
+            temp.setNext(node);
+        }
+    }
+
+
 }

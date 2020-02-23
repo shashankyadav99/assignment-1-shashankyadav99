@@ -1,22 +1,22 @@
 package node;
 
-public class Node<node> {
-    private node data;
-    private Node<node> next;
+public class Node<T> {
+    private T data;
+    private Node<T> next;
 
-    public node getData() {
+    public T getData() {
         return data;
     }
 
-    public void setData(node data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    public Node<node> getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node<node> next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 

@@ -20,7 +20,7 @@ public class Menu {
                 "Press 1 to add a new contact\n" +
                 "Press 2 to view all contacts\n" +
                 "Press 3 to search for a contact\n" +
-                "Press  to delete a contact\n" +
+                "Press 4 to delete a contact\n" +
                 "Press 5 to exit program");
         return scan.nextInt();
     }
@@ -63,10 +63,8 @@ public class Menu {
             System.out.print("Email Address: ");
             email = scan.nextLine().trim();
             person.setEmailID(email);
-            System.out.println("y");
         } else {
             person.setEmailID("");
-            System.out.println("n");
         }
 
         Node<Person> node = new Node<Person>();
@@ -102,7 +100,7 @@ public class Menu {
                 counter++;
         }
 
-        System.out.println(counter + "match found!");
+        System.out.println(counter + " match found!");
         while (true) {
             Node<Person> node = linkedList.getObject();
             if (node == null)

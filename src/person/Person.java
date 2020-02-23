@@ -41,5 +41,20 @@ public class Person {
             this.phoneNumber.append(", " + phoneNumber);
     }
 
-
+    @Override
+    public String toString() {
+        if (this.getEmailID() != "")
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + '\n' +
+                    "Last Name: " + this.getLastName() + '\n' +
+                    "Contact Number(s): " + this.getPhoneNumber() + '\n' +
+                    "Email Address: " + this.getEmailID() + '\n' +
+                    "-------- * -------- * -------- * --------";
+        else
+            return "-------- * -------- * -------- * --------\n" +
+                    "First Name: " + this.getFirstName() + '\n' +
+                    "Last Name: " + this.getLastName() + '\n' +
+                    "Contact Number(s): " + this.getPhoneNumber() + '\n' +
+                    "-------- * -------- * -------- * --------";
+    }
 }

@@ -19,4 +19,11 @@ public class Node<node> {
     public void setNext(Node<node> next) {
         this.next = next;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                '}';
+    }
 }

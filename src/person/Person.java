@@ -1,6 +1,6 @@
 package person;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String firstName;
     private String lastName;
     private String emailID;
@@ -56,5 +56,10 @@ public class Person {
                     "Last Name: " + this.getLastName() + '\n' +
                     "Contact Number(s): " + this.getPhoneNumber() + '\n' +
                     "-------- * -------- * -------- * --------";
+    }
+
+    @Override
+    public int compareTo(Person newPerson) {
+        return this.getFirstName().compareTo(newPerson.getFirstName());
     }
 }

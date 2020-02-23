@@ -33,5 +33,32 @@ public class MyLinkedList<node extends Comparable<node>> {
         }
     }
 
+    public Node<node> delete() {
+        if (isEmpty()) {
+            System.out.println("Underflow");
+            return null;
+        }
+        Node<node> temp = getHead();
+        setHead(getHead().getNext());
+        return temp;
+    }
 
+    public Node<node> delete(int i) {
+        Node<node> deletedNode;
+        Node<node> temp = getHead();
+        if (isEmpty()) {
+            System.out.println("Underflow");
+            return temp;
+        }
+        if (i == 1) {
+            deletedNode = getHead();
+            setHead(null);
+        } else {
+            for (int j = 1; j < i - 1; j++)
+                temp = temp.getNext();
+            deletedNode = temp.getNext();
+            temp.setNext(temp.getNext().getNext());
+        }
+        return deletedNode;
+    }
 }

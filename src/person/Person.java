@@ -35,6 +35,11 @@ public class Person {
     }
 
     public void setPhoneNumber(StringBuffer phoneNumber) {
-        this.phoneNumber = phoneNumber;
+        if (phoneNumber == null)
+            this.phoneNumber = phoneNumber;
+        else
+            this.phoneNumber.append(", " + phoneNumber);
     }
+
+
 }
